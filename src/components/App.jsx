@@ -32,8 +32,8 @@ export const App = () => {
   const countPositiveFeedbackPercentage =
     countTotalFeedback > 0 ? Math.ceil((good / countTotalFeedback()) * 100) : 0;
 
-  const total = countTotalFeedback();
   const options = ['good', 'neutral', 'bad'];
+
   return (
     <div
       style={{
@@ -50,7 +50,7 @@ export const App = () => {
           onLeaveFeedback={onLeaveFeedback}
         ></FeedbackOptions>
       </Section>
-      {total > 0 ? (
+      {countTotalFeedback() > 0 ? (
         <Section title={'Statistics'}>
           <Statistics
             good={good}
