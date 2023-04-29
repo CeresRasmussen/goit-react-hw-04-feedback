@@ -50,7 +50,7 @@ export const App = () => {
           onLeaveFeedback={onLeaveFeedback}
         ></FeedbackOptions>
       </Section>
-      {countTotalFeedback() > 0 ? (
+      {countTotalFeedback > 0 ? (
         <Section title={'Statistics'}>
           <Statistics
             good={good}
