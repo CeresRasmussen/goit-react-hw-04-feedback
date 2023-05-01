@@ -30,7 +30,7 @@ export const App = () => {
   const countTotalFeedback = good + neutral + bad;
 
   const countPositiveFeedbackPercentage =
-    countTotalFeedback > 0 ? Math.ceil((good / countTotalFeedback()) * 100) : 0;
+    countTotalFeedback > 0 ? Math.ceil((good / countTotalFeedback) * 100) : 0;
 
   const options = ['good', 'neutral', 'bad'];
 
@@ -56,8 +56,8 @@ export const App = () => {
             good={good}
             neutral={neutral}
             bad={bad}
-            positivePercentage={countPositiveFeedbackPercentage()}
-            total={countTotalFeedback()}
+            positivePercentage={countPositiveFeedbackPercentage}
+            total={countTotalFeedback}
           />
         </Section>
       ) : (
